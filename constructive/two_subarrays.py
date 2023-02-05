@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 def trap_the_water(blocks):
     ''' this can be improved! '''
     # blocks = [0, 1, 2, 3, 0, 1, 2, 5, 2]

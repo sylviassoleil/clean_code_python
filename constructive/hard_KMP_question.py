@@ -11,6 +11,7 @@ def kmp(x):
     #         scores[i] = l+1
     #     else:
     #         scores[i] = 0
+    # todo figure this out
 
 
     from string import ascii_lowercase
