@@ -1,5 +1,6 @@
+## Graph
 
 - Notes
-  - `set(tuple())` if more efficient than `set(frozenset)`
+  - getting `set(tuple())` if more efficient than `set(frozenset)`
     - bcs hashing  of tuple is slightly more efficient 
   
