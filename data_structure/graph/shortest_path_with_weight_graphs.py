@@ -76,6 +76,34 @@ def roadsAndLibraries(n, c_lib, c_road, cities):
     return cost
 
 
+def build_graphs(edges):
+    graphs = defaultdict(set)
+    for from_, to_ in edges:
+        graphs[from_].add(to_)
+        graphs[to_].add(from_)
+    return graphs
+
+
+def bfs(n, m, edges, s) -> list:
+    # Write your code here
+    # todo get the dfs version of this  --- the minimum fare
+    weight = 6
+    graphs = build_graphs(edges)
+    shortest_dis = [-1 for i in range(n + 1)]
+
+    que = [s]
+    shortest_dis[s] = 0
+    # visited[s] = True
+    while que:
+        node = que.pop(0) #pop from left
+        for i in graphs[node]:
+            if shortest_dis[i] == -1:
+                que.append(i)
+                shortest_dis[i] = shortest_dis[node] + weight
+
+    return [*shortest_dis[1:s], *shortest_dis[s + 1:]]
+
+
 if __name__ == '__main__':
     pass
     cities = [[1,2], [1,3], [1,4]]
