@@ -1,13 +1,16 @@
 import numpy as np
 
 # Fast Fourier Transformation for polynomial multiplication
-
+# https://www.youtube.com/watch?v=h7apO7q16V0
+# Credits: Reducible introduced this awesome idea to me.
+# Will put the inference notes in a doc shortly
 # A(x) = 6*x**3+7*x**2-10*x+9
 # B(x) = (-2)*x**3+4*x-5
 # coefficient rep A: (9, -10, 7, 6)
 # coefficient rep B: (-5, 4, 0, -2)
 # x_k = w_k, w = exp(2pi*i/n)
 # interpolation (inverse FFT, IFFT)
+
 co_1 = np.random.rand(int(1e6))
 co_2 = np.random.rand(int(1e4))
 
@@ -64,12 +67,9 @@ if __name__ == '__main__':
     print('polymul_res_time: %s' % (polymul_res_time))
     '''polymul_res_time: 155.80697801199858'''
 
-    polymul_naive_res_time = timeit.Timer(lambda: polynomial_multiplication_naive(co_1, co_2)).timeit(100)
-    # polymul_naive_res_time = timeit.timeit(stmt=coef, number=1000, setup="from fft import polynomial_multiplication_naive")
-    print('polymul_naive_res_time: %s' % (polymul_naive_res_time))
-
-
-    fft_complex_res_time: 28.963519667013315
+    # polymul_naive_res_time = timeit.Timer(lambda: polynomial_multiplication_naive(co_1, co_2)).timeit(100)
+    # print('polymul_naive_res_time: %s' % (polymul_naive_res_time))
+    # this takes forever & ever
 
 
 
