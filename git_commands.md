@@ -41,5 +41,9 @@ git checkout dev_0
 git reset --hard <reset commit C>
 ```
 
+### git command for pip freeze into the requirements 
+to avoid the conflict of OSsystem, conda or pip installed libs 
+`pip list --format=freeze > requirements.txt` 
+
 
 
