@@ -8,6 +8,7 @@
   - id of the objects and chain assignment
   - garbage collection
 - [Circular import](class_instance_scope.py)
+- [Scope of Variables](scope_keywords.py)
 
 
 ### [Types of attributes](class_instance_attributes.py) 
@@ -25,3 +26,7 @@
 | **access to attributes** | only class attributes, not instance attributes                                 | can't access any attributes                                                 |
 | **write to class**       | can be used to declare a factory method that returns the objects of the class  | changing value of instance attribute will not be reflected to other objects |
 
+
+### with handlers
+file streaming 
+add the methods `__enter__()` and `__exit__()` in the object methods. 
